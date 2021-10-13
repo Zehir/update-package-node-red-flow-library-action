@@ -16,7 +16,7 @@ The result of update
 
 ## Example usage
 
-```
+```yaml
 name: NPM Publish
 
 on:
@@ -41,6 +41,7 @@ jobs:
       - if: steps.publish.outputs.type != 'none'
         name: Update Node-Red flow-library
         uses: Zehir/update-package-node-red-flow-library-action@v1.0.3
+        continue-on-error: true
         with:
           package-name: 'node-red-contrib-deconz'
 
