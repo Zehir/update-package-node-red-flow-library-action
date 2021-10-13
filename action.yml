@@ -1,0 +1,13 @@
+name: 'Update Node-Red flow-library'
+description: 'Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).'
+inputs:
+  package-name:
+    description: 'The name of the package'
+    required: true
+    default: ''
+outputs:
+  result:
+    description: 'The result of update'
+runs:
+  using: 'node12'
+  main: 'index.js'
