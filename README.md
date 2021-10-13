@@ -17,7 +17,7 @@ The result of update
 ## Example usage
 
 ```
-uses: actions/update-package-node-red-flow-library-action@v1.0.1
+uses: actions/update-package-node-red-flow-library-action@v1.0.2
 with:
   package-name: 'node-red-contrib-deconz'
 ```
