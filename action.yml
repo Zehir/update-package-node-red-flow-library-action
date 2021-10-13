@@ -1,4 +1,5 @@
 name: 'Update Node-Red flow-library'
+author: 'Zehir <zehir@zorim.fr>'
 description: 'Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).'
 inputs:
   package-name:
