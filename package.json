@@ -1,6 +1,6 @@
 {
   "name": "update-package-node-red-flow-library-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).",
   "main": "index.js",
   "keywords": [
