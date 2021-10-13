@@ -25,9 +25,11 @@ const flowLibraryUrl = 'https://flows.nodered.org/add/node';
                         _csrf: csrf
                     }
                 });
+                console.log('resutl=', response2.body);
                 core.setOutput('result', response2.body);
             }
         } catch (error) {
+            console.log('resutl=', error.response.body);
             core.setOutput('result', error.response.body);
         }
     } catch (error) {
