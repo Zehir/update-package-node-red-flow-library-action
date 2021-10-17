@@ -11,6 +11,7 @@ const flowLibraryUrl = 'https://flows.nodered.org/add/node';
         const packageName = core.getInput('package-name');
         if (packageName === undefined || packageName === '') {
             core.setFailed("No package name provided.");
+            return;
         }
         try {
             const cookieJar = new CookieJar();
