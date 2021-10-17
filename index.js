@@ -26,8 +26,21 @@ const flowLibraryUrl = 'https://flows.nodered.org/add/node';
                         _csrf: csrf
                     }
                 });
-                console.log('result =', response2.body);
-                core.setOutput('result', response2.body);
+
+                if (response2.body.substr(1, 8 + packageName.length) === 'node/' + packageName + '?m=') {
+                    try {
+                        let msg = atob(response2.body.substr(9 + packageName.length));
+                        console.log('result =', msg);
+                        core.setOutput('result', msg);
+                    } catch (e) {
+                        console.log('result =', response2.body);
+                        core.setOutput('result', response2.body);
+                    }
+                } else {
+                    console.log('result =', response2.body);
+                    core.setOutput('result', response2.body);
+                }
+
             }
         } catch (error) {
             console.log('result =', error.response.body);
