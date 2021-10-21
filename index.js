@@ -27,23 +27,24 @@ const flowLibraryUrl = 'https://flows.nodered.org/add/node';
                     }
                 });
 
-                if (response2.body.substr(1, 8 + packageName.length) === 'node/' + packageName + '?m=') {
+                let result = response2.body.trim();
+                if (result.substr(1, 8 + packageName.length) === 'node/' + packageName + '?m=') {
                     try {
-                        let msg = atob(response2.body.substr(9 + packageName.length));
-                        console.log('result =', msg);
+                        let msg = atob(result.substr(9 + packageName.length));
+                        console.log(`result = "${msg}"`);
                         core.setOutput('result', msg);
                     } catch (e) {
-                        console.log('result =', response2.body);
-                        core.setOutput('result', response2.body);
+                        console.log(`result = "${result}"`);
+                        core.setOutput('result', result);
                     }
                 } else {
-                    console.log('result =', response2.body);
-                    core.setOutput('result', response2.body);
+                    console.log(`result = "${result}"`);
+                    core.setOutput('result', result);
                 }
 
             }
         } catch (error) {
-            console.log('result =', error.response.body);
+            console.log(`result = "${error.response.body}"`);
             core.setOutput('result', error.response.body);
         }
     } catch (error) {
