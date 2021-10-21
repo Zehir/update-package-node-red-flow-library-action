@@ -24,6 +24,10 @@
       "url": "https://github.com/Zehir"
     }
   ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/Zehir"
+  },
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
