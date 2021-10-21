@@ -40,7 +40,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
       - if: steps.publish.outputs.type != 'none'
         name: Update Node-Red flow-library
-        uses: Zehir/update-package-node-red-flow-library-action@v1.0.4
+        uses: Zehir/update-package-node-red-flow-library-action@v1.0.5
         continue-on-error: true
         with:
           package-name: 'node-red-contrib-deconz'
